@@ -1,20 +1,40 @@
+import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Provider } from 'react-redux';
 
-export default function App() {
+// Navigations
+import { NavigationContainer} from "@react-navigation/native";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+// Init Store
+import {store} from "./src/utils/store";
+
+// Stacks
+import OnboardingStack from "./src/ui/stacks/OnboardingStack/OnboardingStack";
+import HomeStack from "./src/ui/stacks/HomeStack/HomeStack";
+import AuthStack from "./src/ui/stacks/AuthStack/AuthStack";
+
+const App = () => {
+    const Stack = createNativeStackNavigator();
+    const user = {name: "Testi Tester"};
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <Provider store={store}>
+          <StatusBar style="auto" />
+              <NavigationContainer>
+                  <Stack.Navigator>
+                      {!user
+                          ? <Stack.Screen name="HomeStack" component={HomeStack} options={{headerShown: false}} />
+                          :
+                          <>
+                              <Stack.Screen name="OnboardingStack" component={OnboardingStack} options={{headerShown: false}} />
+                              <Stack.Screen name="AuthStack" component={AuthStack} options={{headerShown: false}} />
+                          </>
+                      }
+                  </Stack.Navigator>
+              </NavigationContainer>
+      </Provider>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
