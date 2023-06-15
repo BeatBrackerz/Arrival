@@ -1,5 +1,4 @@
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
 import { useSupabase } from "../../../utils/supabase";
 import OnboardingStack from "../OnboardingStack/OnboardingStack";
@@ -8,6 +7,7 @@ import HomeStack from "../HomeStack/HomeStack";
 //@ts-ignore
 import bg from "../../../assets/Background.jpg";
 import AnimatedBackgroundImage from "../../components/Parallax/AnimatedBackgroundImage";
+import {createNativeStackNavigator} from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator();
 

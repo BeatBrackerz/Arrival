@@ -4,7 +4,7 @@ import LoginScreen from "../../screens/LoginScreen/LoginScreen";
 const Stack = createNativeStackNavigator();
 const AuthStack = () => {
   return (
-    <Stack.Navigator initialRouteName="LoginScreen" screenOptions={{contentStyle: {backgroundColor: 'transparent'} }}>
+    <Stack.Navigator initialRouteName="LoginScreen" screenOptions={{ contentStyle: {backgroundColor: 'transparent'} }}>
       <Stack.Screen
         name="LoginScreen"
         component={LoginScreen}

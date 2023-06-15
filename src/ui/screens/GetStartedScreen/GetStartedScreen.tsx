@@ -1,5 +1,4 @@
 import { View, Text, SafeAreaView, TouchableOpacity } from "react-native";
-import AnimatedBackgroundImage from "../../components/Parallax/AnimatedBackgroundImage";
 import AnimatedView from "../../components/Parallax/AnmiatedView";
 import { StatusBar } from "expo-status-bar";
 import Animated, {
@@ -15,6 +14,7 @@ import delay from "../../../utils/delay/delay";
 
 // @ts-ignore
 import bg from "../../../assets/Background.jpg";
+import {SharedElement} from "react-navigation-shared-element";
 
 const GetStartedScreen = () => {
   const navigation = useNavigation();
@@ -35,19 +35,19 @@ const GetStartedScreen = () => {
   };
 
   return (
-    <Animated.View>
+    <>
       <StatusBar style="light" />
       <AnimatedView order={6}>
         {!navigate && (
           <SafeAreaView className="p-5">
             <View className="flex-1 justify-items-center mt-10">
-              <Animated.Text
-                entering={FadeInLeft.delay(200).duration(1000)}
-                exiting={FadeOutLeft.delay(600).duration(500)}
-                className="font-bold uppercase text-6xl text-white mt-14"
-              >
-                Arrival
-              </Animated.Text>
+                <Animated.View
+                    entering={FadeInLeft.delay(200).duration(1000)}
+                    exiting={FadeOutLeft.delay(600).duration(500)}
+                    className="mt-14"
+                >
+                  <Text className="font-bold uppercase text-6xl text-white">Arrival</Text>
+                </Animated.View>
               <Animated.Text
                 entering={FadeInLeft.delay(800).duration(1000)}
                 exiting={FadeOutLeft.delay(300).duration(500)}
@@ -83,7 +83,7 @@ const GetStartedScreen = () => {
           </SafeAreaView>
         )}
       </AnimatedView>
-    </Animated.View>
+    </>
   );
 };
 

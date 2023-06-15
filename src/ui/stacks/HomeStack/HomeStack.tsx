@@ -7,7 +7,7 @@ import React from "react";
 const Drawer = createDrawerNavigator();
 const HomeStack = () => {
   return (
-    <Drawer.Navigator initialRouteName="HomeScreen" >
+    <Drawer.Navigator initialRouteName="HomeScreen" screenOptions={{sceneContainerStyle: {backgroundColor: 'transparent'}}}>
       <Drawer.Screen
         name="HomeScreen"
         component={HomeScreen}

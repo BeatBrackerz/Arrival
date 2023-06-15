@@ -12,7 +12,6 @@ import {
 } from "../../../utils/store/slices/navSlice";
 import NavFavourites from "../../components/Navigation/NavFavourites";
 import AnimatedView from "../../components/Parallax/AnmiatedView";
-import AnimatedBackgroundImage from "../../components/Parallax/AnimatedBackgroundImage";
 import {StatusBar} from "expo-status-bar";
 
 const HomeScreen = () => {
@@ -22,12 +21,6 @@ const HomeScreen = () => {
   return (
     <View>
         <StatusBar style="light" />
-      <AnimatedBackgroundImage
-        src={{
-          uri: "https://images.pexels.com/photos/9503239/pexels-photo-9503239.jpeg",
-        }}
-        order={1}
-      />
       <AnimatedView order={2}>
         <View className="p-5 mt-24">
           <GooglePlacesAutocomplete

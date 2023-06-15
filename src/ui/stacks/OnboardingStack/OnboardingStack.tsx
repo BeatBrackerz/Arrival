@@ -4,7 +4,7 @@ import GetStartedScreen from "../../screens/GetStartedScreen/GetStartedScreen";
 const Stack = createNativeStackNavigator();
 const OnboardingStack = () => {
   return (
-    <Stack.Navigator initialRouteName="GetStartedScreen" screenOptions={{contentStyle: {backgroundColor: 'transparent'} }}>
+    <Stack.Navigator initialRouteName="GetStartedScreen" screenOptions={{ contentStyle: {backgroundColor: 'transparent'} }}>
       <Stack.Screen
         name="GetStartedScreen"
         component={GetStartedScreen}

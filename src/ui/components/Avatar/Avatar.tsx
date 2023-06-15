@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { supabase, useSupabase } from "../../../utils/supabase";
-import { View, Image, TouchableOpacity } from "react-native";
+import {View, Image, TouchableOpacity, ActivityIndicator} from "react-native";
 import * as ImagePicker from "expo-image-picker";
 
 interface Props {
@@ -9,7 +9,7 @@ interface Props {
 }
 
 const Avatar = ({ size = 150, className = "" }: Props) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
   const avatarSize = { height: size, width: size };
   const { user, logout } = useSupabase();
@@ -37,6 +37,8 @@ const Avatar = ({ size = 150, className = "" }: Props) => {
       if (error instanceof Error) {
         console.log("Error downloading image: ", error.message);
       }
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -110,7 +112,9 @@ const Avatar = ({ size = 150, className = "" }: Props) => {
         <View
           style={[avatarSize]}
           className="rounded-full overflow-hidden max-w-full bg-slate-700 border"
-        />
+        >
+          {loading && <ActivityIndicator />}
+        </View>
       )}
 
       {/*
