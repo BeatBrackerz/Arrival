@@ -1,13 +1,17 @@
-import {createNativeStackNavigator} from "@react-navigation/native-stack";
-import GetStarted from "../../screens/GetStarted/GetStarted";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import LoginScreen from "../../screens/LoginScreen/LoginScreen";
 
 const Stack = createNativeStackNavigator();
 const AuthStack = () => {
-    return(
-        <Stack.Navigator initialRouteName="GetStarted">
-            <Stack.Screen name="GetStarted" component={GetStarted} options={{headerShown: false}} />
-        </Stack.Navigator>
-    );
+  return (
+    <Stack.Navigator initialRouteName="LoginScreen" screenOptions={{contentStyle: {backgroundColor: 'transparent'} }}>
+      <Stack.Screen
+        name="LoginScreen"
+        component={LoginScreen}
+        options={{ headerShown: false }}
+      />
+    </Stack.Navigator>
+  );
 };
 
 export default AuthStack;

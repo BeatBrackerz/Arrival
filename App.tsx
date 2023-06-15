@@ -1,39 +1,88 @@
-import 'react-native-gesture-handler';
-import { StatusBar } from 'expo-status-bar';
-import { Provider } from 'react-redux';
-
-// Navigations
-import { NavigationContainer} from "@react-navigation/native";
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import "react-native-gesture-handler";
+import { StatusBar } from "expo-status-bar";
+import { Provider } from "react-redux";
+import * as Device from 'expo-device';
+import * as Notifications from "expo-notifications";
 
 // Init Store
-import {store} from "./src/utils/store";
+import { store } from "./src/utils/store";
 
-// Stacks
-import OnboardingStack from "./src/ui/stacks/OnboardingStack/OnboardingStack";
-import HomeStack from "./src/ui/stacks/HomeStack/HomeStack";
-import AuthStack from "./src/ui/stacks/AuthStack/AuthStack";
+// Stack
+import GlobalStack from "./src/ui/stacks/GlobalStack/GlobalStack";
+import { SupabaseProvider } from "./src/utils/supabase";
+import {Platform} from "react-native";
+import {useEffect, useRef, useState} from "react";
+
+// Notifications
+Notifications.setNotificationHandler({
+    handleNotification: async () => ({
+        shouldShowAlert: true,
+        shouldPlaySound: false,
+        shouldSetBadge: false
+    }),
+});
+
+const registerForPushNotificationsAsync = async () => {
+  let token;
+    if (Device.isDevice) {
+        const { status: existingStatus } = await Notifications.getPermissionsAsync();
+        let finalStatus = existingStatus;
+        if (existingStatus !== 'granted') {
+            const { status } = await Notifications.requestPermissionsAsync();
+            finalStatus = status;
+        }
+        if (finalStatus !== 'granted') {
+            alert('Failed to get push token for push notification!');
+            return;
+        }
+        token = (await Notifications.getExpoPushTokenAsync()).data;
+        console.log(token);
+    } else {
+        alert('Must use physical device for Push Notifications');
+    }
+
+    if (Platform.OS === 'android') {
+        Notifications.setNotificationChannelAsync('default', {
+            name: 'default',
+            importance: Notifications.AndroidImportance.MAX,
+            vibrationPattern: [0, 250, 250, 250],
+            lightColor: '#FF231F7C',
+        });
+    }
+
+    return token;
+};
 
 const App = () => {
-    const Stack = createNativeStackNavigator();
-    const user = {name: "Testi Tester"};
+    const [expoPushToken, setExpoPushToken] = useState<string | undefined>('');
+    const [notification, setNotification] = useState<any>(false);
+    const notificationListener = useRef<any>();
+    const responseListener = useRef<any>();
+
+    useEffect(() => {
+        registerForPushNotificationsAsync().then(token => setExpoPushToken(token));
+
+        notificationListener.current = Notifications.addNotificationReceivedListener(notification => {
+            setNotification(notification);
+        });
+
+        responseListener.current = Notifications.addNotificationResponseReceivedListener(response => {
+            console.log(response);
+        });
+
+        return () => {
+            Notifications.removeNotificationSubscription(notificationListener.current);
+            Notifications.removeNotificationSubscription(responseListener.current);
+        };
+    }, []);
 
   return (
-      <Provider store={store}>
-          <StatusBar style="auto" />
-              <NavigationContainer>
-                  <Stack.Navigator>
-                      {!user
-                          ? <Stack.Screen name="HomeStack" component={HomeStack} options={{headerShown: false}} />
-                          :
-                          <>
-                              <Stack.Screen name="OnboardingStack" component={OnboardingStack} options={{headerShown: false}} />
-                              <Stack.Screen name="AuthStack" component={AuthStack} options={{headerShown: false}} />
-                          </>
-                      }
-                  </Stack.Navigator>
-              </NavigationContainer>
-      </Provider>
+    <Provider store={store}>
+      <StatusBar style="auto" />
+      <SupabaseProvider>
+        <GlobalStack />
+      </SupabaseProvider>
+    </Provider>
   );
 };
 

@@ -1,13 +1,17 @@
-import {createNativeStackNavigator} from "@react-navigation/native-stack";
-import GetStarted from "../../screens/GetStarted/GetStarted";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import GetStartedScreen from "../../screens/GetStartedScreen/GetStartedScreen";
 
 const Stack = createNativeStackNavigator();
 const OnboardingStack = () => {
-    return(
-    <Stack.Navigator initialRouteName="GetStarted">
-        <Stack.Screen name="GetStarted" component={GetStarted} options={{headerShown: false}} />
+  return (
+    <Stack.Navigator initialRouteName="GetStartedScreen" screenOptions={{contentStyle: {backgroundColor: 'transparent'} }}>
+      <Stack.Screen
+        name="GetStartedScreen"
+        component={GetStartedScreen}
+        options={{ headerShown: false }}
+      />
     </Stack.Navigator>
-    );
+  );
 };
 
 export default OnboardingStack;
