@@ -1,8 +1,19 @@
 {
   "extends": "expo/tsconfig.base",
+  "exclude": ["node_modules"],
   "compilerOptions": {
     "strict": true,
     "module": "ES6",
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "baseUrl": "."
   }
 }

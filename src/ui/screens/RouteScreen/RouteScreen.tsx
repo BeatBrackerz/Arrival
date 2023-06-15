@@ -1,9 +1,9 @@
-import React from "react";
-import { View } from "react-native";
-import Map from "../../components/Map/Map";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import NavigateCard from "../../components/Navigation/NavigateCard";
-import VehicleOptionsCard from "../../components/Vehicle/VehicleOptionsCard";
+import React from 'react';
+import {View} from 'react-native';
+import Map from '../../components/Map/Map';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import NavigateCard from '../../components/Navigation/NavigateCard';
+import VehicleOptionsCard from '../../components/Vehicle/VehicleOptionsCard';
 
 const RouteScreen = () => {
   const Stack = createNativeStackNavigator();

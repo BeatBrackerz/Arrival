@@ -1,5 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { RootState } from "../store";
+import {createSlice} from '@reduxjs/toolkit';
+import {RootState} from '../store';
 
 interface NavigationState {
   origin: any;
@@ -14,7 +14,7 @@ const initialState: NavigationState = {
 };
 
 export const navSlice = createSlice({
-  name: "nav",
+  name: 'nav',
   initialState,
   reducers: {
     setOrigin: (state, action) => {
@@ -29,7 +29,7 @@ export const navSlice = createSlice({
   },
 });
 
-export const { setOrigin, setDestination, setTravelTimeInformation } =
+export const {setOrigin, setDestination, setTravelTimeInformation} =
   navSlice.actions;
 
 // SELECTORS

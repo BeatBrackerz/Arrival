@@ -1,17 +1,17 @@
-import React from "react";
-import { SafeAreaView, Text, TouchableOpacity, View } from "react-native";
-import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
+import React from 'react';
+import {SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
+import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
 // @ts-ignore
-import { GOOGLE_MAPS_APIKEY } from "@env";
-import { setDestination } from "../../../utils/store/slices/navSlice";
-import { useDispatch } from "react-redux";
-import { useColorScheme } from "nativewind";
-import { useNavigation } from "@react-navigation/native";
-import NavFavourites from "./NavFavourites";
-import { Icon } from "react-native-elements";
+import {GOOGLE_MAPS_APIKEY} from '@env';
+import {setDestination} from '../../../utils/store/slices/navSlice';
+import {useDispatch} from 'react-redux';
+import {useColorScheme} from 'nativewind';
+import {useNavigation} from '@react-navigation/native';
+import NavFavourites from './NavFavourites';
+import {Icon} from 'react-native-elements';
 
 const NavigateCard = () => {
-  const { colorScheme } = useColorScheme();
+  const {colorScheme} = useColorScheme();
   const dispatch = useDispatch();
   const navigation = useNavigation();
 
@@ -20,13 +20,13 @@ const NavigateCard = () => {
       <View>
         <TouchableOpacity
           // @ts-ignore
-          onPress={() => navigation.navigate("Home")}
+          onPress={() => navigation.navigate('Home')}
           className="absolute top-3 left-5 p-3 z-50 rounded-full"
         >
           <Icon
             name="chevron-left"
             type="fontawesome"
-            color={colorScheme === "light" ? "black" : "white"}
+            color={colorScheme === 'light' ? 'black' : 'white'}
           />
         </TouchableOpacity>
         <Text className="text-center py-5 text-xl font-semibold text-black dark:text-white">
@@ -42,7 +42,7 @@ const NavigateCard = () => {
             nearbyPlacesAPI="GooglePlacesSearch"
             placeholder="Searching Places..."
             // @ts-ignore
-            returnKeyType={"default"}
+            returnKeyType={'default'}
             fetchDetails={true}
             onPress={(data, details = null) => {
               dispatch(
@@ -50,15 +50,15 @@ const NavigateCard = () => {
                   // @ts-ignore
                   location: details.geometry.location,
                   description: data.description,
-                })
+                }),
               );
 
               // @ts-ignore
-              navigation.navigate("VehicleOptionsCard");
+              navigation.navigate('VehicleOptionsCard');
             }}
             query={{
               key: GOOGLE_MAPS_APIKEY,
-              language: "en",
+              language: 'en',
             }}
             styles={{
               container: {
@@ -68,8 +68,8 @@ const NavigateCard = () => {
               textInput: {
                 fontSize: 18,
                 backgroundColor:
-                  colorScheme === "light" ? "#e5e7eb" : "#334155",
-                color: colorScheme === "light" ? "black" : "white",
+                  colorScheme === 'light' ? '#e5e7eb' : '#334155',
+                color: colorScheme === 'light' ? 'black' : 'white',
               },
               textInputContainer: {
                 paddingHorizontal: 20,
@@ -85,12 +85,12 @@ const NavigateCard = () => {
         <TouchableOpacity
           className="flex flex-row justify-around bg-black w-28 px-4 py-3 rounded-full dark:bg-white"
           // @ts-ignore
-          onPress={() => navigation.navigate("VehicleOptionsCard")}
+          onPress={() => navigation.navigate('VehicleOptionsCard')}
         >
           <Icon
             name="car"
             type="font-awesome"
-            color={colorScheme === "light" ? "white" : "black"}
+            color={colorScheme === 'light' ? 'white' : 'black'}
             size={16}
           />
           <Text className="text-white text-center dark:text-black">
@@ -102,7 +102,7 @@ const NavigateCard = () => {
           <Icon
             name="fast-food-outline"
             type="ionicon"
-            color={colorScheme === "light" ? "white" : "black"}
+            color={colorScheme === 'light' ? 'white' : 'black'}
             size={16}
           />
           <Text className="text-white text-center dark:text-black">Eats</Text>

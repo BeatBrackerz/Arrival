@@ -1,20 +1,19 @@
-import { View, Text, SafeAreaView, TouchableOpacity } from "react-native";
-import AnimatedView from "../../components/Parallax/AnmiatedView";
-import { StatusBar } from "expo-status-bar";
+import {View, Text, SafeAreaView, TouchableOpacity} from 'react-native';
+import AnimatedView from '../../components/Parallax/AnmiatedView';
+import {StatusBar} from 'expo-status-bar';
 import Animated, {
   FadeInDown,
   FadeInLeft,
   FadeOutDown,
   FadeOutLeft,
-} from "react-native-reanimated";
-import { Icon } from "react-native-elements";
-import { useFocusEffect, useNavigation } from "@react-navigation/native";
-import { useCallback, useState } from "react";
-import delay from "../../../utils/delay/delay";
+} from 'react-native-reanimated';
+import {Icon} from 'react-native-elements';
+import {useFocusEffect, useNavigation} from '@react-navigation/native';
+import {useCallback, useState} from 'react';
+import delay from '../../../utils/delay/delay';
 
 // @ts-ignore
-import bg from "../../../assets/Background.jpg";
-import {SharedElement} from "react-navigation-shared-element";
+import bg from '../../../assets/Background.jpg';
 
 const GetStartedScreen = () => {
   const navigation = useNavigation();
@@ -23,7 +22,7 @@ const GetStartedScreen = () => {
   useFocusEffect(
     useCallback(() => {
       setNavigate(false);
-    }, [])
+    }, []),
   );
 
   const animatedNavigation = async () => {
@@ -31,7 +30,7 @@ const GetStartedScreen = () => {
     await delay(1500);
 
     // @ts-ignore
-    navigation.navigate("AuthStack");
+    navigation.navigate('AuthStack');
   };
 
   return (
@@ -41,13 +40,15 @@ const GetStartedScreen = () => {
         {!navigate && (
           <SafeAreaView className="p-5">
             <View className="flex-1 justify-items-center mt-10">
-                <Animated.View
-                    entering={FadeInLeft.delay(200).duration(1000)}
-                    exiting={FadeOutLeft.delay(600).duration(500)}
-                    className="mt-14"
-                >
-                  <Text className="font-bold uppercase text-6xl text-white">Arrival</Text>
-                </Animated.View>
+              <Animated.View
+                entering={FadeInLeft.delay(200).duration(1000)}
+                exiting={FadeOutLeft.delay(600).duration(500)}
+                className="mt-14"
+              >
+                <Text className="font-bold uppercase text-6xl text-white">
+                  Arrival
+                </Text>
+              </Animated.View>
               <Animated.Text
                 entering={FadeInLeft.delay(800).duration(1000)}
                 exiting={FadeOutLeft.delay(300).duration(500)}

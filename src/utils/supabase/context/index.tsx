@@ -1,1 +1,1 @@
-export * from "./SupabaseContext";
+export * from './SupabaseContext';

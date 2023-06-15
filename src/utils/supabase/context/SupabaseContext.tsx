@@ -1,5 +1,5 @@
-import { createContext } from "react";
-import { Session } from "@supabase/supabase-js";
+import {createContext} from 'react';
+import {Session} from '@supabase/supabase-js';
 
 type SupabaseContextProps = {
   isLoggedIn: boolean;

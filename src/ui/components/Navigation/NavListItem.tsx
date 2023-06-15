@@ -1,15 +1,15 @@
-import { Icon } from "react-native-elements";
-import { Text, TouchableOpacity, View } from "react-native";
-import React, { FC } from "react";
-import { useColorScheme } from "nativewind";
+import {Icon} from 'react-native-elements';
+import {Text, TouchableOpacity, View} from 'react-native';
+import React, {FC} from 'react';
+import {useColorScheme} from 'nativewind';
 import Animated, {
   Layout,
   SlideInLeft,
   SlideOutRight,
-} from "react-native-reanimated";
+} from 'react-native-reanimated';
 
-const NavListItem: FC<any> = ({ location, destination, icon, index }) => {
-  const { colorScheme } = useColorScheme();
+const NavListItem: FC<any> = ({location, destination, icon, index}) => {
+  const {colorScheme} = useColorScheme();
 
   return (
     <Animated.View
@@ -22,7 +22,7 @@ const NavListItem: FC<any> = ({ location, destination, icon, index }) => {
           className="mr-4 rounded-full bg-gray-300 p-3 dark:bg-slate-500"
           name={icon}
           type="ionicon"
-          color={colorScheme === "light" ? "white" : "black"}
+          color={colorScheme === 'light' ? 'white' : 'black'}
           size={18}
         />
         <View>

@@ -1,11 +1,11 @@
-import "react-native-url-polyfill/auto";
-import { createClient, Session } from "@supabase/supabase-js";
-import React, { useState, useEffect } from "react";
-import * as SecureStore from "expo-secure-store";
-import { SupabaseContext } from "../context";
+import 'react-native-url-polyfill/auto';
+import {createClient, Session} from '@supabase/supabase-js';
+import React, {useState, useEffect} from 'react';
+import * as SecureStore from 'expo-secure-store';
+import {SupabaseContext} from '../context';
 
 // @ts-ignore
-import { SUPABASE_URL, SUPABASE_KEY } from "@env";
+import {SUPABASE_URL, SUPABASE_KEY} from '@env';
 
 // We are using Expo Secure Store to persist session info
 const ExpoSecureStoreAdapter = {
@@ -40,7 +40,7 @@ export const SupabaseProvider = (props: SupabaseProviderProps) => {
   const [user, setUser] = useState<any>(null);
 
   const login = async (email: string, password: string) => {
-    const { data, error } = await supabase.auth.signInWithPassword({
+    const {data, error} = await supabase.auth.signInWithPassword({
       email,
       password,
     });
@@ -49,7 +49,7 @@ export const SupabaseProvider = (props: SupabaseProviderProps) => {
   };
 
   const register = async (email: string, password: string) => {
-    const { error } = await supabase.auth.signUp({
+    const {error} = await supabase.auth.signUp({
       email,
       password,
     });
@@ -57,22 +57,22 @@ export const SupabaseProvider = (props: SupabaseProviderProps) => {
   };
 
   const forgotPassword = async (email: string) => {
-    const { error } = await supabase.auth.resetPasswordForEmail(email);
+    const {error} = await supabase.auth.resetPasswordForEmail(email);
     if (error) throw error;
   };
 
   const logout = async () => {
-    const { error } = await supabase.auth.signOut();
+    const {error} = await supabase.auth.signOut();
     if (error) throw error;
     setLoggedIn(false);
   };
 
   const getProfile = async (session: Session | null) => {
     if (session?.user) {
-      const { data, error, status } = await supabase
-        .from("profiles")
+      const {data, error, status} = await supabase
+        .from('profiles')
         .select()
-        .eq("id", session?.user.id)
+        .eq('id', session?.user.id)
         .single();
 
       if (data) setUser(data);
@@ -80,7 +80,7 @@ export const SupabaseProvider = (props: SupabaseProviderProps) => {
   };
 
   useEffect(() => {
-    supabase.auth.getSession().then(async ({ data: { session } }) => {
+    supabase.auth.getSession().then(async ({data: {session}}) => {
       setSession(session);
       await getProfile(session);
       setLoggedIn(session !== null);

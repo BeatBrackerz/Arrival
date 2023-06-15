@@ -1,18 +1,18 @@
-import { useState, useEffect } from "react";
-import { supabase, useSupabase } from "../../../utils/supabase";
-import {View, Image, TouchableOpacity, ActivityIndicator} from "react-native";
-import * as ImagePicker from "expo-image-picker";
+import {useState, useEffect} from 'react';
+import {supabase, useSupabase} from '../../../utils/supabase';
+import {View, Image, TouchableOpacity, ActivityIndicator} from 'react-native';
+import * as ImagePicker from 'expo-image-picker';
 
 interface Props {
   size: number;
   className?: string;
 }
 
-const Avatar = ({ size = 150, className = "" }: Props) => {
+const Avatar = ({size = 150, className = ''}: Props) => {
   const [loading, setLoading] = useState(true);
   const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
-  const avatarSize = { height: size, width: size };
-  const { user, logout } = useSupabase();
+  const avatarSize = {height: size, width: size};
+  const {user, logout} = useSupabase();
 
   useEffect(() => {
     downloadImage(user.avatar_url);
@@ -20,8 +20,8 @@ const Avatar = ({ size = 150, className = "" }: Props) => {
 
   const downloadImage = async (path: string) => {
     try {
-      const { data, error } = await supabase.storage
-        .from("avatars")
+      const {data, error} = await supabase.storage
+        .from('avatars')
         .download(path);
 
       if (error) {
@@ -35,7 +35,7 @@ const Avatar = ({ size = 150, className = "" }: Props) => {
       };
     } catch (error) {
       if (error instanceof Error) {
-        console.log("Error downloading image: ", error.message);
+        console.log('Error downloading image: ', error.message);
       }
     } finally {
       setLoading(false);
@@ -53,7 +53,7 @@ const Avatar = ({ size = 150, className = "" }: Props) => {
         quality: 1,
       });
 
-      if(file.canceled) return;
+      if (file.canceled) return;
 
       const photo = {
         // @ts-ignore
@@ -65,9 +65,9 @@ const Avatar = ({ size = 150, className = "" }: Props) => {
 
       const formData = new FormData();
       // @ts-ignore
-      formData.append("file", photo);
+      formData.append('file', photo);
 
-      const fileExt = photo.uri.split(".").pop();
+      const fileExt = photo.uri.split('.').pop();
       const filePath = `${Math.random()}.${fileExt}`;
 
       const updates = {
@@ -76,18 +76,18 @@ const Avatar = ({ size = 150, className = "" }: Props) => {
         updated_at: new Date(),
       };
 
-      const { error: profileError } = await supabase
-        .from("profiles")
+      const {error: profileError} = await supabase
+        .from('profiles')
         .upsert(updates);
-      const { error } = await supabase.storage
-        .from("avatars")
+      const {error} = await supabase.storage
+        .from('avatars')
         .upload(filePath, formData);
 
       if (error || profileError) throw error;
 
       await downloadImage(filePath);
     } catch (error) {
-        throw error;
+      throw error;
     } finally {
       setLoading(false);
     }
@@ -98,12 +98,12 @@ const Avatar = ({ size = 150, className = "" }: Props) => {
       onPress={logout}
       disabled={loading}
       className={`${
-        loading ? "opacity-60 rounded-s" : "opacity-100"
+        loading ? 'opacity-60 rounded-s' : 'opacity-100'
       } ${className}`}
     >
       {avatarUrl ? (
         <Image
-          source={{ uri: avatarUrl }}
+          source={{uri: avatarUrl}}
           accessibilityLabel="Avatar"
           style={[avatarSize]}
           className="rounded-full overflow-hidden max-w-full object-cover pt-0"

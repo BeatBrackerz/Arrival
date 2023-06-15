@@ -1,1 +1,1 @@
-export * from "./RouteScreen";
+export * from './RouteScreen';

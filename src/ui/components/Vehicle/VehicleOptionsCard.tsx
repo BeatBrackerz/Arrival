@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from 'react';
 import {
   SafeAreaView,
   View,
@@ -6,31 +6,31 @@ import {
   TouchableOpacity,
   FlatList,
   Image,
-} from "react-native";
-import { Icon } from "react-native-elements";
-import { useNavigation } from "@react-navigation/native";
-import { useColorScheme } from "nativewind";
-import { useSelector } from "react-redux";
-import { selectTravelTimeInformation } from "../../../utils/store/slices/navSlice";
+} from 'react-native';
+import {Icon} from 'react-native-elements';
+import {useNavigation} from '@react-navigation/native';
+import {useColorScheme} from 'nativewind';
+import {useSelector} from 'react-redux';
+import {selectTravelTimeInformation} from '../../../utils/store/slices/navSlice';
 
 const data = [
   {
-    id: "Uber-X-123",
-    title: "Uber X",
+    id: 'Uber-X-123',
+    title: 'Uber X',
     multiplier: 1,
-    image: "https://links.papareact.com/3pn",
+    image: 'https://links.papareact.com/3pn',
   },
   {
-    id: "Uber-XL-456",
-    title: "Uber XL",
+    id: 'Uber-XL-456',
+    title: 'Uber XL',
     multiplier: 1.2,
-    image: "https://links.papareact.com/5w8",
+    image: 'https://links.papareact.com/5w8',
   },
   {
-    id: "Uber-LUX-789",
-    title: "Uber LUX",
+    id: 'Uber-LUX-789',
+    title: 'Uber LUX',
     multiplier: 1.75,
-    image: "https://links.papareact.com/7pf",
+    image: 'https://links.papareact.com/7pf',
   },
 ];
 
@@ -38,7 +38,7 @@ const data = [
 const SURGE_CHARGE_RATE = 1.5;
 
 const VehicleOptionsCard = () => {
-  const { colorScheme } = useColorScheme();
+  const {colorScheme} = useColorScheme();
   const navigation = useNavigation();
   const travelTimeInformation = useSelector(selectTravelTimeInformation);
 
@@ -49,13 +49,13 @@ const VehicleOptionsCard = () => {
       <View>
         <TouchableOpacity
           // @ts-ignore
-          onPress={() => navigation.navigate("NavigateCard")}
+          onPress={() => navigation.navigate('NavigateCard')}
           className="absolute top-3 left-5 p-3 z-50 rounded-full"
         >
           <Icon
             name="chevron-left"
             type="fontawesome"
-            color={colorScheme === "light" ? "black" : "white"}
+            color={colorScheme === 'light' ? 'black' : 'white'}
           />
         </TouchableOpacity>
         <Text className="text-center pt-3 text-xl font-semibold text-black dark:text-white">
@@ -68,18 +68,18 @@ const VehicleOptionsCard = () => {
       </View>
 
       <FlatList
-        keyExtractor={(item) => item.id}
+        keyExtractor={item => item.id}
         data={data}
-        renderItem={({ item: { id, title, multiplier, image }, item }) => (
+        renderItem={({item: {id, title, multiplier, image}, item}) => (
           <TouchableOpacity
             onPress={() => setSelected(item)}
             className={`flex-row items-center justify-between px-10 ${
-              id === selected?.id && "bg-gray-200 dark:bg-slate-700"
+              id === selected?.id && 'bg-gray-200 dark:bg-slate-700'
             }`}
           >
             <Image
-              style={{ width: 100, height: 100, resizeMode: "contain" }}
-              source={{ uri: image }}
+              style={{width: 100, height: 100, resizeMode: 'contain'}}
+              source={{uri: image}}
             />
             <View className="-ml-6">
               <Text className="text-xl font-semibold text-black dark:text-white">
@@ -90,14 +90,14 @@ const VehicleOptionsCard = () => {
               </Text>
             </View>
             <Text className="text-xl text-black dark:text-white">
-              {new Intl.NumberFormat("de", {
-                style: "currency",
-                currency: "EUR",
+              {new Intl.NumberFormat('de', {
+                style: 'currency',
+                currency: 'EUR',
               }).format(
                 (travelTimeInformation?.duration.value *
                   SURGE_CHARGE_RATE *
                   multiplier) /
-                  100
+                  100,
               )}
             </Text>
           </TouchableOpacity>
@@ -109,7 +109,7 @@ const VehicleOptionsCard = () => {
         <TouchableOpacity
           disabled={!selected}
           className={`bg-black dark:bg-white py-3 m-3 rounded-lg ${
-            !selected && "bg-gray-300 dark:bg-slate-500"
+            !selected && 'bg-gray-300 dark:bg-slate-500'
           }`}
         >
           <Text className="text-center text-xl text-white dark:text-black">
