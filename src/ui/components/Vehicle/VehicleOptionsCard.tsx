@@ -7,7 +7,7 @@ import {
   FlatList,
   Image,
 } from 'react-native';
-import {Icon} from 'react-native-elements';
+import {Icon} from '@rneui/themed';
 import {useNavigation} from '@react-navigation/native';
 import {useColorScheme} from 'nativewind';
 import {useSelector} from 'react-redux';

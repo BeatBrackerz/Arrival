@@ -3,17 +3,17 @@ import AnimatedView from '../../components/Parallax/AnmiatedView';
 import {StatusBar} from 'expo-status-bar';
 import Animated, {
   FadeInDown,
-  FadeInLeft,
+  FadeInLeft, FadeInUp,
   FadeOutDown,
-  FadeOutLeft,
+  FadeOutLeft, FadeOutUp,
 } from 'react-native-reanimated';
-import {Icon} from 'react-native-elements';
+import {Icon} from '@rneui/themed';
 import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import {useCallback, useState} from 'react';
 import delay from '../../../utils/delay/delay';
 
-// @ts-ignore
-import bg from '../../../assets/Background.jpg';
+//@ts-ignore
+import logo from '../../../assets/Arrival_horizontal.png';
 
 const GetStartedScreen = () => {
   const navigation = useNavigation();
@@ -27,7 +27,7 @@ const GetStartedScreen = () => {
 
   const animatedNavigation = async () => {
     setNavigate(true);
-    await delay(1500);
+    await delay(1000);
 
     // @ts-ignore
     navigation.navigate('AuthStack');
@@ -40,15 +40,12 @@ const GetStartedScreen = () => {
         {!navigate && (
           <SafeAreaView className="p-5">
             <View className="flex-1 justify-items-center mt-10">
-              <Animated.View
-                entering={FadeInLeft.delay(200).duration(1000)}
-                exiting={FadeOutLeft.delay(600).duration(500)}
+              <Animated.Image
+                entering={FadeInUp.delay(200).duration(1000)}
+                exiting={FadeOutUp.delay(600).duration(500)}
+                source={logo}
                 className="mt-14"
-              >
-                <Text className="font-bold uppercase text-6xl text-white">
-                  Arrival
-                </Text>
-              </Animated.View>
+              />
               <Animated.Text
                 entering={FadeInLeft.delay(800).duration(1000)}
                 exiting={FadeOutLeft.delay(300).duration(500)}

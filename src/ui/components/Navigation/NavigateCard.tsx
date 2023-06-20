@@ -8,7 +8,7 @@ import {useDispatch} from 'react-redux';
 import {useColorScheme} from 'nativewind';
 import {useNavigation} from '@react-navigation/native';
 import NavFavourites from './NavFavourites';
-import {Icon} from 'react-native-elements';
+import {Icon} from '@rneui/themed';
 
 const NavigateCard = () => {
   const {colorScheme} = useColorScheme();

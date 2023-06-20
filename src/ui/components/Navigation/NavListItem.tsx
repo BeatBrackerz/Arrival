@@ -1,4 +1,4 @@
-import {Icon} from 'react-native-elements';
+import {Icon} from '@rneui/themed';
 import {Text, TouchableOpacity, View} from 'react-native';
 import React, {FC} from 'react';
 import {useColorScheme} from 'nativewind';

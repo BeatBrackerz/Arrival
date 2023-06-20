@@ -1,8 +1,12 @@
 import HomeScreen from '../../screens/HomeScreen/HomeScreen';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import Avatar from '../../components/Avatar/Avatar';
-import {Image} from 'react-native';
+import {Image, View} from 'react-native';
 import React from 'react';
+
+//@ts-ignore
+import logo from '../../../assets/Arrival_horizontal.png';
+import {BlurView} from 'expo-blur';
 
 const Drawer = createDrawerNavigator();
 const HomeStack = () => {
@@ -20,24 +24,25 @@ const HomeStack = () => {
           headerShown: true,
           headerTransparent: true,
           drawerType: 'front',
+          headerTintColor: 'white',
           headerTitle: () => (
             <Image
-              source={{
-                uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/2560px-Uber_logo_2018.svg.png',
-              }}
+              source={logo}
               style={{
-                width: 100,
+                width: 120,
                 height: 100,
                 resizeMode: 'contain',
-                marginLeft: 30,
               }}
             />
           ),
           headerRight: () => (
-            <Avatar
-              size={40}
-              className="pr-5"
-            />
+            <View className="mr-5">
+              <Avatar
+                size={35}
+                className="rounded-full border border-white"
+              />
+            </View>
+
           ),
         }}
       />

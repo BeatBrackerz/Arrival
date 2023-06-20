@@ -1,6 +1,6 @@
 import React from 'react';
 import {FlatList, TouchableOpacity, View, Text, Image} from 'react-native';
-import {Icon} from 'react-native-elements';
+import {Icon} from '@rneui/themed';
 import {useColorScheme} from 'nativewind';
 import {useNavigation} from '@react-navigation/native';
 import {useSelector} from 'react-redux';

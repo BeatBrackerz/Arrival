@@ -1,7 +1,8 @@
-import {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {supabase, useSupabase} from '../../../utils/supabase';
 import {View, Image, TouchableOpacity, ActivityIndicator} from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
+import {Skeleton} from '@rneui/themed';
 
 interface Props {
   size: number;
@@ -98,7 +99,7 @@ const Avatar = ({size = 150, className = ''}: Props) => {
       onPress={logout}
       disabled={loading}
       className={`${
-        loading ? 'opacity-60 rounded-s' : 'opacity-100'
+        loading ? 'opacity-60' : 'opacity-100'
       } ${className}`}
     >
       {avatarUrl ? (
@@ -106,14 +107,14 @@ const Avatar = ({size = 150, className = ''}: Props) => {
           source={{uri: avatarUrl}}
           accessibilityLabel="Avatar"
           style={[avatarSize]}
-          className="rounded-full overflow-hidden max-w-full object-cover pt-0"
+          className={`overflow-hidden max-w-full object-cover pt-0 rounded-full border border-white`}
         />
       ) : (
         <View
           style={[avatarSize]}
-          className="rounded-full overflow-hidden max-w-full bg-slate-700 border"
+          className="overflow-hidden max-w-full bg-slate-700 flex justify-items-center align-middle rounded-full border border-white"
         >
-          {loading && <ActivityIndicator />}
+          {loading && <Skeleton circle={true} animation="pulse"/>}
         </View>
       )}
 
