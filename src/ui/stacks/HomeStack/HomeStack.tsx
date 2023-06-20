@@ -42,7 +42,6 @@ const HomeStack = () => {
                 className="rounded-full border border-white"
               />
             </View>
-
           ),
         }}
       />

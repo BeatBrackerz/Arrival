@@ -3,9 +3,11 @@ import AnimatedView from '../../components/Parallax/AnmiatedView';
 import {StatusBar} from 'expo-status-bar';
 import Animated, {
   FadeInDown,
-  FadeInLeft, FadeInUp,
+  FadeInLeft,
+  FadeInUp,
   FadeOutDown,
-  FadeOutLeft, FadeOutUp,
+  FadeOutLeft,
+  FadeOutUp,
 } from 'react-native-reanimated';
 import {Icon} from '@rneui/themed';
 import {useFocusEffect, useNavigation} from '@react-navigation/native';

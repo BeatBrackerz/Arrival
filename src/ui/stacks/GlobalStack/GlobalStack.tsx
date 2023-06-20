@@ -25,9 +25,8 @@ const GlobalStack = () => {
         screenOptions={{
           headerShown: false,
           contentStyle: {backgroundColor: 'transparent'},
-          animation: 'fade'
+          animation: 'fade',
         }}
-
       >
         {isLoggedIn ? (
           <Stack.Screen

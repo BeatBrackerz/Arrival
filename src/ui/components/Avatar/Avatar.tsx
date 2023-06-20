@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {supabase, useSupabase} from '../../../utils/supabase';
-import {View, Image, TouchableOpacity, ActivityIndicator} from 'react-native';
+import {View, Image, TouchableOpacity} from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import {Skeleton} from '@rneui/themed';
 
@@ -98,9 +98,7 @@ const Avatar = ({size = 150, className = ''}: Props) => {
     <TouchableOpacity
       onPress={logout}
       disabled={loading}
-      className={`${
-        loading ? 'opacity-60' : 'opacity-100'
-      } ${className}`}
+      className={`${loading ? 'opacity-60' : 'opacity-100'} ${className}`}
     >
       {avatarUrl ? (
         <Image
@@ -114,7 +112,12 @@ const Avatar = ({size = 150, className = ''}: Props) => {
           style={[avatarSize]}
           className="overflow-hidden max-w-full bg-slate-700 flex justify-items-center align-middle rounded-full border border-white"
         >
-          {loading && <Skeleton circle={true} animation="pulse"/>}
+          {loading && (
+            <Skeleton
+              circle={true}
+              animation="pulse"
+            />
+          )}
         </View>
       )}
 
