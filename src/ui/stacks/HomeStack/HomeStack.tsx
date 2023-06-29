@@ -6,19 +6,30 @@ import React from 'react';
 
 //@ts-ignore
 import logo from '../../../assets/Arrival_horizontal.png';
-import {BlurView} from 'expo-blur';
+import DrawerMenu from '../../components/DrawerMenu/DrawerMenu';
 
 const Drawer = createDrawerNavigator();
 const HomeStack = () => {
   return (
     <Drawer.Navigator
-      initialRouteName="HomeScreen"
+      initialRouteName="Home"
+      useLegacyImplementation
+      drawerContent={props => <DrawerMenu {...props} />}
       screenOptions={{
         sceneContainerStyle: {backgroundColor: 'transparent'},
+        drawerStyle: {backgroundColor: 'transparent'},
+        drawerActiveTintColor: 'black',
+        drawerActiveBackgroundColor: 'rgba(253,230,138,0.8)',
+        drawerInactiveTintColor: 'white',
+        drawerInactiveBackgroundColor: 'transparent',
+        drawerItemStyle: {
+          borderRadius: 50,
+          paddingHorizontal: 10,
+        },
       }}
     >
       <Drawer.Screen
-        name="HomeScreen"
+        name="Home"
         component={HomeScreen}
         options={{
           headerShown: true,
