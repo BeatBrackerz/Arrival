@@ -38,3 +38,7 @@ Follow these steps to set up the Arrival App repository on your local system:
 6. Open your Expo Go App and scan the QR code
 
 Please note that you will need a functioning Supabase instance and, if necessary, API keys for Google Maps and Stripe to fully utilize all the app's features.
+
+## Contribution
+
+We welcome contributions to the Arrival App. If you have suggestions for improving the app, please open an issue in this repository. If you would like to make changes, please submit a pull request and provide a detailed description of the proposed changes.
