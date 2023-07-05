@@ -42,3 +42,7 @@ Please note that you will need a functioning Supabase instance and, if necessary
 ## Contribution
 
 We welcome contributions to the Arrival App. If you have suggestions for improving the app, please open an issue in this repository. If you would like to make changes, please submit a pull request and provide a detailed description of the proposed changes.
+
+## License
+
+This project is licensed under the MIT License. For more information, please refer to the [LICENSE](https://github.com/BeatBrackerz/Arrival/blob/main/LICENSE) file.
