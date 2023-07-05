@@ -2,7 +2,7 @@
 name: Create UI Component
 about: Describe this issue template's purpose here.
 title: "[FEAT]"
-labels: "enhancement, 👋New, 🔢3, 😌Medium"
+labels: "enhancement"
 assignees: '' 
 
 ---
@@ -44,5 +44,5 @@ please leave a comment and ping a GitLab reviewer, maintainer, or MR coach.
 - [ ] Create directory COMPONENT_NAME
 - [ ] Create COMPONENT_NAME.tsx and index.tsx
 - [ ] Implement all features & functions
-- [ ] Add import to component/index.tsx
+- [ ] Add import to components/index.tsx
 
