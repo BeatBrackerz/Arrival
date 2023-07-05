@@ -46,3 +46,7 @@ We welcome contributions to the Arrival App. If you have suggestions for improvi
 ## License
 
 This project is licensed under the MIT License. For more information, please refer to the [LICENSE](https://github.com/BeatBrackerz/Arrival/blob/main/LICENSE) file.
+
+## Authors
+
+The Arrival App was developed by [BeatBrackerz](https://github.com/BeatBrackerz). For questions or inquiries, you can reach me at [email address](mailto:it@beatbrackerz.de).
