@@ -13,3 +13,15 @@ The Arrival App is a user-friendly and efficient platform for booking handyman s
 - **Notifications:** The app sends notifications to users and handymen to keep them updated on the status of their bookings, schedule changes, or other relevant information.
 - **Reviews and Feedback:** After completing a booking, users can rate and leave feedback for handymen. This helps other users in selecting the right handyman and enables handymen to build their reputation and improve their services.
 - **Payment Integration:** The app provides an integrated payment solution to allow users to conveniently and securely pay for handyman services. Users can process payments directly through the app.
+
+## Technologies
+
+The Arrival App is based on modern web technologies and utilizes the following technology stack:
+
+- **Frontend:** React.js, React-Native, Expo SDK, TailwindCSS, Nativewind
+- **Backend:** Supabase
+- **Database:** Postgres (via Supabase)
+- **Storage:** Supabase Storage
+- **Authentication:** Supabase Authentication
+- **Maps Integration:** Google Maps API
+- **Payment Integration:** Stripe API
