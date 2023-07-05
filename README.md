@@ -25,3 +25,16 @@ The Arrival App is based on modern web technologies and utilizes the following t
 - **Authentication:** Supabase Authentication
 - **Maps Integration:** Google Maps API
 - **Payment Integration:** Stripe API
+
+## Installation and Local Development
+
+Follow these steps to set up the Arrival App repository on your local system:
+
+1. Clone the repository: `git clone https://github.com/BeatBrackerz/Arrival.git`
+2. Navigate to the project directory: `cd Arrival`
+3. Install the dependencies: `npm install`
+4. Configure the environment variables: Create a `.env` file based on the `.env.example` template and fill in the required information.
+5. Start the development server: `npm start`
+6. Open your Expo Go App and scan the QR code
+
+Please note that you will need a functioning Supabase instance and, if necessary, API keys for Google Maps and Stripe to fully utilize all the app's features.
