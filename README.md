@@ -50,3 +50,7 @@ This project is licensed under the MIT License. For more information, please ref
 ## Authors
 
 The Arrival App was developed by [BeatBrackerz](https://github.com/BeatBrackerz). For questions or inquiries, you can reach me at [email address](mailto:it@beatbrackerz.de).
+
+------
+
+We hope you find the Arrival App useful and that it helps you in finding and booking qualified handymen. Enjoy using the app!
