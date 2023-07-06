@@ -26,8 +26,8 @@ jobs:
       #    if [ -z "${{ secrets.EXPO_APPLE_ID }}" ]; then
       #      echo "You must provide an EXPO_APPLE_ID to deploy to testflight"
       #    fi
-      #- name: Checkout repository
-      #  uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
       # Trying to install dependecies from cache
       - name: Cache node modules
