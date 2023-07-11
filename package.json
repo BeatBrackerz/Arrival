@@ -76,7 +76,16 @@
       "main"
     ],
     "plugins": [
-      "semantic-release-expo",
+      [
+        "semantic-release-expo",
+        {
+          "versions": {
+            "version": "${next.raw}",
+            "android": "${code}",
+            "ios": "${next.raw}"
+          }
+        }
+      ],
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
