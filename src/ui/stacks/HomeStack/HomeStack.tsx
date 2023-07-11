@@ -13,7 +13,6 @@ const HomeStack = () => {
   return (
     <Drawer.Navigator
       initialRouteName="Home"
-      useLegacyImplementation
       drawerContent={props => <DrawerMenu {...props} />}
       screenOptions={{
         sceneContainerStyle: {backgroundColor: 'transparent'},

@@ -5,7 +5,7 @@ import {
   DrawerItemList,
   useDrawerProgress,
 } from '@react-navigation/drawer';
-import Animated from 'react-native-reanimated';
+import Animated, {interpolate, useAnimatedStyle} from 'react-native-reanimated';
 import {BlurView} from 'expo-blur';
 import {SafeAreaView, ScrollView, View, Text} from 'react-native';
 
@@ -15,17 +15,24 @@ import logo from '../../../assets/Arrival_horizontal.png';
 const DrawerMenu = (props: DrawerContentComponentProps) => {
   const progress = useDrawerProgress();
 
-  // @ts-ignore
-  const translateX = Animated.interpolateNode(progress, {
-    inputRange: [0, 1],
-    outputRange: [-100, 0],
+  /*
+  const animatedX = useAnimatedStyle(() => {
+    const scale = interpolate(progress, [0, 1], [-100, 0],);
+
+    return {
+      transform: [{ translateX: scale }],
+    };
   });
 
-  // @ts-ignore
-  const translateY = Animated.interpolateNode(progress, {
-    inputRange: [0, 1],
-    outputRange: [100, 0],
+  const animatedY = useAnimatedStyle(() => {
+    const scale = interpolate(progress, [0, 1], [100, 0],);
+
+    return {
+      transform: [{ translateY: scale }],
+    };
   });
+   */
+
 
   return (
     <BlurView
@@ -35,26 +42,28 @@ const DrawerMenu = (props: DrawerContentComponentProps) => {
       <SafeAreaView className="flex-1 justify-between">
         <Animated.Image
           source={logo}
-          style={{
-            alignSelf: 'center',
-            width: 240,
-            resizeMode: 'contain',
-            transform: [{translateX}],
-          }}
+          style={[
+            {
+              alignSelf: 'center',
+              width: 240,
+              resizeMode: 'contain',
+            },
+
+          ]}
         />
         <View className="flex-1">
           <ScrollView
             {...props}
             showsVerticalScrollIndicator={false}
           >
-            <Animated.View style={{transform: [{translateX}]}}>
+            <Animated.View>
               <DrawerItemList {...props} />
             </Animated.View>
           </ScrollView>
         </View>
         <Animated.View
           className="flex border-t border-gray-600 mx-3"
-          style={{transform: [{translateX}]}}
+
         >
           <Text className="text-gray-600  my-4">SETTINGS</Text>
           <DrawerItem
@@ -90,7 +99,7 @@ const DrawerMenu = (props: DrawerContentComponentProps) => {
         </Animated.View>
         <Animated.Text
           className="text-gray-600 self-center"
-          style={{fontSize: 8, transform: [{translateY}]}}
+          style={{fontSize: 8}}
           onPress={() => console.log('Link to Website')}
         >
           © {new Date().getFullYear()} Gerhard & Hammer GbR
