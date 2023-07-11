@@ -61,6 +61,7 @@
     "eslint-config-prettier": "^8.8.0",
     "prettier": "^2.8.8",
     "semantic-release": "^21.0.7",
+    "semantic-release-expo": "^2.2.3",
     "tailwindcss": "^3.2.7",
     "typescript": "^4.9.4"
   },
@@ -75,6 +76,7 @@
       "main"
     ],
     "plugins": [
+      "semantic-release-expo",
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
@@ -84,7 +86,17 @@
           "npmPublish": false
         }
       ],
-      "@semantic-release/git",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md",
+            "package.json",
+            "package-lock.json",
+            "app.json"
+          ]
+        }
+      ],
       "@semantic-release/github"
     ]
   }

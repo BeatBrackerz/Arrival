@@ -1,7 +1,10 @@
 name: Update on EAS
 
 on:
-  push:
+  workflow_run:
+    workflows: [ "release" ]
+    types:
+      - completed
     branches:
       - main
       - release
