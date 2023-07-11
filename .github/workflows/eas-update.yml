@@ -2,7 +2,7 @@ name: Update on EAS
 
 on:
   workflow_run:
-    workflows: [ "release" ]
+    workflows: [ "Release" ]
     types:
       - completed
     branches:
@@ -13,6 +13,7 @@ jobs:
   update:
     name: Update
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
     steps:
       - name: Check for EXPO_TOKEN
         run: |
