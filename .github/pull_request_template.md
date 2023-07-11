@@ -4,7 +4,7 @@ about: Describe this issue template's purpose here.
 
 ---
 
-## What does this MR do and why?
+## What does this PR do and why?
 
 - ("Add Unit Tests for" / "Add Stories for" / "Create new component") FUNCTION_NAME (ISSUE_REFERENCE)
 
@@ -15,7 +15,7 @@ _Screenshots are required for UI changes, and strongly recommended for all other
 <!--
 Please include any relevant screenshots or screen recordings that will assist
 reviewers and future readers. If you need help visually verifying the change,
-please leave a comment and ping a GitLab reviewer, maintainer, or MR coach.
+please leave a comment and ping a Github reviewer, maintainer, or PR coach.
 -->
 
 ## How to set up and validate locally
