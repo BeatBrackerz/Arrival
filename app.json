@@ -11,20 +11,24 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
       "config": {
         "usesNonExemptEncryption": false
       },
-      "bundleIdentifier": "com.beatbrackerz.arrival"
+      "bundleIdentifier": "com.beatbrackerz.arrival",
+      "buildNumber": "1.0.0"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.beatbrackerz.arrival"
+      "package": "com.beatbrackerz.arrival",
+      "versionCode": 0
     },
     "web": {
       "favicon": "./src/assets/favicon.png"
