@@ -12,7 +12,7 @@ jobs:
   release:
     strategy:
       matrix:
-        node-version: [lts]
+        node-version: [lts/Hydrogen]
 
     name: Create a new release
     runs-on: ubuntu-latest
