@@ -1,12 +1,13 @@
-name: Build and Submit on EAS
+name: EAS - Submit
 
 on:
   workflow_dispatch:
 
 jobs:
   build-and-submit-on-eas:
-    name: Build and submit on EAS
+    name: Submit on EAS
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
     steps:
       - name: Check for EXPO_TOKEN
         run: |
