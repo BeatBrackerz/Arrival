@@ -1,3 +1,4 @@
+import React from 'react';
 import {View, Text, SafeAreaView, TouchableOpacity} from 'react-native';
 import AnimatedView from '../../components/Parallax/AnmiatedView';
 import {StatusBar} from 'expo-status-bar';
