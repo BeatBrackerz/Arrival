@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/BeatBrackerz/Arrival/compare/v1.0.0...v1.1.0) (2023-07-11)
+
+
+### Features
+
+* **ci:** add scheduled expo dependencies workflow ([9b4a0db](https://github.com/BeatBrackerz/Arrival/commit/9b4a0dbc7089ce35e07762a003bd80ba97030ea3))
+
 # 1.0.0 (2023-07-11)
 
 
