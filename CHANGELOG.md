@@ -1,3 +1,11 @@
+## [1.2.1](https://github.com/BeatBrackerz/Arrival/compare/v1.2.0...v1.2.1) (2023-07-11)
+
+
+### Bug Fixes
+
+* **component:** remove drawer progress animation for DrawerMenu.tsx in HomeStack.tsx ([4d25bb5](https://github.com/BeatBrackerz/Arrival/commit/4d25bb51f46303aedf9cfc6524d87249ae554653))
+* **lint:** exec linter and prettier ([9964283](https://github.com/BeatBrackerz/Arrival/commit/9964283e55f6f982505093fdc968871446645b5a))
+
 # [1.2.0](https://github.com/BeatBrackerz/Arrival/compare/v1.1.0...v1.2.0) (2023-07-11)
 
 
