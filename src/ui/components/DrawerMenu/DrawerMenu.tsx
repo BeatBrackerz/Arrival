@@ -33,7 +33,6 @@ const DrawerMenu = (props: DrawerContentComponentProps) => {
   });
    */
 
-
   return (
     <BlurView
       intensity={24}
@@ -48,7 +47,6 @@ const DrawerMenu = (props: DrawerContentComponentProps) => {
               width: 240,
               resizeMode: 'contain',
             },
-
           ]}
         />
         <View className="flex-1">
@@ -61,10 +59,7 @@ const DrawerMenu = (props: DrawerContentComponentProps) => {
             </Animated.View>
           </ScrollView>
         </View>
-        <Animated.View
-          className="flex border-t border-gray-600 mx-3"
-
-        >
+        <Animated.View className="flex border-t border-gray-600 mx-3">
           <Text className="text-gray-600  my-4">SETTINGS</Text>
           <DrawerItem
             label="User"
