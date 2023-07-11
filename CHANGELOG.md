@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/BeatBrackerz/Arrival/compare/v1.2.1...v1.2.2) (2023-07-11)
+
+
+### Bug Fixes
+
+* **release:** add Android versionCode to semantic-release ([a18e3bd](https://github.com/BeatBrackerz/Arrival/commit/a18e3bd873ec86c465884011135a53c5ea66b0c1))
+
 ## [1.2.1](https://github.com/BeatBrackerz/Arrival/compare/v1.2.0...v1.2.1) (2023-07-11)
 
 
