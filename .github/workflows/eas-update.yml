@@ -1,4 +1,4 @@
-name: Update on EAS
+name: EAS - Update
 
 on:
   workflow_run:
