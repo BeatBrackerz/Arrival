@@ -10,7 +10,7 @@ jobs:
   build:
     strategy:
       matrix:
-        node-version: [lts/Hydrogen, latest]
+        node-version: [lts/*, latest]
 
     name: Build with ${{ matrix.node-version }}
     runs-on: ubuntu-latest
@@ -51,3 +51,6 @@ jobs:
 
       - name: Type checking
         run: npm run types:check
+
+      - name: Run Tests
+        run: npm run test:ci

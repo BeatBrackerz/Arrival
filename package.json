@@ -11,7 +11,7 @@
     "lint:fix": "npx eslint . --fix",
     "prettier": "npx prettier --write \"{,!(node_modules|dist|build|coverage|.expo)/**/}*.{js,jsx,ts,tsx,json}\"",
     "test": "jest --watchAll",
-    "test:ci": "jest",
+    "test:ci": "jest --passWithNoTests",
     "types:check": "tsc --noEmit --pretty"
   },
   "dependencies": {
