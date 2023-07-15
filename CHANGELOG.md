@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/BeatBrackerz/Arrival/compare/v1.3.0...v1.4.0) (2023-07-15)
+
+
+### Features
+
+* **ci:** add tests to ci pipeline ([20b9b1b](https://github.com/BeatBrackerz/Arrival/commit/20b9b1b405292961b61bd959a215d749c4164a83))
+* **test:** add jest test config ([f0e4c8e](https://github.com/BeatBrackerz/Arrival/commit/f0e4c8e73a96aca3de23b2ae87a6c47fdaa32ae1))
+
 # [1.3.0](https://github.com/BeatBrackerz/Arrival/compare/v1.2.2...v1.3.0) (2023-07-13)
 
 
