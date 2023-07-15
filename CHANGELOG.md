@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/BeatBrackerz/Arrival/compare/v1.4.0...v1.4.1) (2023-07-15)
+
+
+### Bug Fixes
+
+* **ci:** add node version lts/* instead of lts/Hydrogen and rename update.yml pipeline name ([8baa760](https://github.com/BeatBrackerz/Arrival/commit/8baa760910e8212668d9d8800e710ed2b5c04db2))
+
 # [1.4.0](https://github.com/BeatBrackerz/Arrival/compare/v1.3.0...v1.4.0) (2023-07-15)
 
 
