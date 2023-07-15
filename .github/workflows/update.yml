@@ -1,4 +1,4 @@
-name: Update dependencies
+name: Expo - Update
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ jobs:
   update:
     strategy:
       matrix:
-        node-version: [lts/Hydrogen]
+        node-version: [lts/*]
 
     name: Update all dependencies
     runs-on: ubuntu-latest

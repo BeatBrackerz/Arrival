@@ -28,7 +28,7 @@ jobs:
   test:
     strategy:
       matrix:
-        node-version: [lts/Hydrogen, latest]
+        node-version: [lts/*, latest]
 
     name: Test with ${{ matrix.node-version }}
     runs-on: ubuntu-latest
