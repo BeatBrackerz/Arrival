@@ -1,6 +1,6 @@
 {
   "name": "arrival",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "author": "BeatBrackerz (https://github.com/beatbrackerz)",
   "scripts": {
     "start": "expo start",
