@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/BeatBrackerz/Arrival/compare/v1.5.0...v1.6.0) (2023-07-27)
+
+
+### Features
+
+* **deps:** update expo dependencies to the latest version ([57b1690](https://github.com/BeatBrackerz/Arrival/commit/57b1690537a31e81b58ab6ada9dabedba27bc4c8))
+
 # [1.5.0](https://github.com/BeatBrackerz/Arrival/compare/v1.4.1...v1.5.0) (2023-07-24)
 
 
