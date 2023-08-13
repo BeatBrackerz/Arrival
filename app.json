@@ -2,7 +2,7 @@
   "expo": {
     "name": "Arrival",
     "slug": "arrival",
-    "version": "1.7.0",
+    "version": "1.8.0",
     "orientation": "portrait",
     "icon": "./src/assets/icon.png",
     "userInterfaceStyle": "automatic",
@@ -20,7 +20,7 @@
         "usesNonExemptEncryption": false
       },
       "bundleIdentifier": "com.beatbrackerz.arrival",
-      "buildNumber": "1.7.0"
+      "buildNumber": "1.8.0"
     },
     "android": {
       "adaptiveIcon": {
