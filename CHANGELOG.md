@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/BeatBrackerz/Arrival/compare/v1.8.0...v1.9.0) (2023-08-15)
+
+
+### Features
+
+* **doc:** refine readme ([76fab6f](https://github.com/BeatBrackerz/Arrival/commit/76fab6fcca4e1319d2db4a8cfcc07889be14daee))
+
 # [1.8.0](https://github.com/BeatBrackerz/Arrival/compare/v1.7.0...v1.8.0) (2023-08-13)
 
 
