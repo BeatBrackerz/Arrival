@@ -74,51 +74,29 @@ The Arrival App is based on modern web technologies and utilizes the following t
 
 ### Frontend 
 
-<a href="https://reactjs.org/" target="_blank"><img src="
-https://img.shields.io/badge/React-gray?logo=react&logoColor=%2361DAFB&labelColor=white&color=%2361DAFB
-"/> </a>
-<a href="https://reactnative.dev/" target="_blank" ><img src="
-https://img.shields.io/badge/React--Native-gray?logo=react&logoColor=%2361DAFB&labelColor=white&color=%2361DAFB
-"/></a>
-<a href="https://docs.expo.dev/workflow/upgrading-expo-sdk-walkthrough/" target="_blank" ><img src="
-https://img.shields.io/badge/Expo-gray?logo=expo&logoColor=%23000020&labelColor=white&color=%23000020
-"/></a>
-<a href="https://tailwindcss.com/" target="_blank" ><img src="
-https://img.shields.io/badge/TawilwindCSS-gray?logo=tailwindcss&logoColor=%2306B6D4&labelColor=white&color=%2306B6D4
-"/></a>
-<a href="https://www.nativewind.dev/" target="_blank" ><img src="
-https://img.shields.io/badge/TawilwindCSS-gray?logo=tailwindcss&logoColor=%2306B6D4&labelColor=white&color=%2306B6D4
-"/></a>
+<a href="https://reactjs.org/" target="_blank"><img src="https://img.shields.io/badge/React-gray?logo=react&logoColor=%2361DAFB&labelColor=white&color=%2361DAFB"/> </a>
+<a href="https://reactnative.dev/" target="_blank" ><img src="https://img.shields.io/badge/React--Native-gray?logo=react&logoColor=%2361DAFB&labelColor=white&color=%2361DAFB"/></a>
+<a href="https://docs.expo.dev/workflow/upgrading-expo-sdk-walkthrough/" target="_blank" ><img src="https://img.shields.io/badge/Expo-gray?logo=expo&logoColor=%23000020&labelColor=white&color=%23000020"/></a>
+<a href="https://tailwindcss.com/" target="_blank" ><img src="https://img.shields.io/badge/TawilwindCSS-gray?logo=tailwindcss&logoColor=%2306B6D4&labelColor=white&color=%2306B6D4"/></a>
+<a href="https://www.nativewind.dev/" target="_blank" ><img src="https://img.shields.io/badge/Nativewind-gray?logo=tailwindcss&logoColor=%2306B6D4&labelColor=white&color=%2306B6D4"/></a>
 
 ### Backend
-<a href="https://supabase.com/" target="_blank" ><img src="
-https://img.shields.io/badge/Supabase-gray?logo=supabase&logoColor=%233FCF8E&labelColor=white&color=%233FCF8E
-"/> </a>
+<a href="https://supabase.com/" target="_blank" ><img src="https://img.shields.io/badge/Supabase-gray?logo=supabase&logoColor=%233FCF8E&labelColor=white&color=%233FCF8E"/> </a>
 
 #### Database
-<a href="https://supabase.com/docs/guides/database/overview" target="_blank" ><img src="
-https://img.shields.io/badge/Postgresql (via Supabase)-gray?logo=postgresql&logoColor=%234169E1&labelColor=white&color=%234169E1
-"/></a>
+<a href="https://supabase.com/docs/guides/database/overview" target="_blank" ><img src="https://img.shields.io/badge/Postgresql (via Supabase)-gray?logo=postgresql&logoColor=%234169E1&labelColor=white&color=%234169E1"/></a>
 
 #### Storage
-<a href="https://supabase.com/docs/guides/storage" target="_blank" ><img src="
-https://img.shields.io/badge/Supabase_Storage-gray?logo=supabase&logoColor=%233FCF8E&labelColor=white&color=%233FCF8E
-"/></a>
+<a href="https://supabase.com/docs/guides/storage" target="_blank" ><img src="https://img.shields.io/badge/Supabase_Storage-gray?logo=supabase&logoColor=%233FCF8E&labelColor=white&color=%233FCF8E"/></a>
 
 #### Authentication
-<a href="https://supabase.com/docs/guides/auth" target="_blank" ><img src="
-https://img.shields.io/badge/Supabase_Authentication-gray?logo=supabase&logoColor=%233FCF8E&labelColor=white&color=%233FCF8E
-"/></a>
+<a href="https://supabase.com/docs/guides/auth" target="_blank" ><img src="https://img.shields.io/badge/Supabase_Authentication-gray?logo=supabase&logoColor=%233FCF8E&labelColor=white&color=%233FCF8E"/></a>
 
 #### Maps Integration
-<a href="https://developers.google.com/maps" target="_blank" ><img src="
-https://img.shields.io/badge/Google%20Maps%20API-gray?logo=google%20maps&logoColor=%234285F4&labelColor=white&color=%234285F4
-"/></a>
+<a href="https://developers.google.com/maps" target="_blank" ><img src="https://img.shields.io/badge/Google%20Maps%20API-gray?logo=google%20maps&logoColor=%234285F4&labelColor=white&color=%234285F4"/></a>
 
 #### Payment Integration
-<a href="https://stripe.com/docs/api" target="_blank" ><img src="
-https://img.shields.io/badge/Stripe%20API-gray?logo=stripe&logoColor=%23008CDD&labelColor=white&color=%23008CDD
-"/></a>
+<a href="https://stripe.com/docs/api" target="_blank" ><img src="https://img.shields.io/badge/Stripe%20API-gray?logo=stripe&logoColor=%23008CDD&labelColor=white&color=%23008CDD"/></a>
 
 </br>
 
@@ -155,7 +133,6 @@ We welcome contributions to the Arrival App. If you have suggestions for improvi
 
 ##  License 
 
-This project is licensed under the MIT License: 
  ![Static Badge](https://img.shields.io/badge/MIT-green?label=LICENSE&link=https%3A%2F%2Fgithub.com%2FBeatBrackerz%2FArrival%2Fblob%2Fmain%2FLICENSE)
  
 </br>
