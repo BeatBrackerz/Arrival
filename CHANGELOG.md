@@ -1,3 +1,11 @@
+## [1.9.1](https://github.com/BeatBrackerz/Arrival/compare/v1.9.0...v1.9.1) (2023-08-21)
+
+
+### Bug Fixes
+
+* **docs:** update README.md ([c6eba46](https://github.com/BeatBrackerz/Arrival/commit/c6eba46cd91315c72759c7f0bd8d19d1705c0c48))
+* **docs:** update README.md ([#18](https://github.com/BeatBrackerz/Arrival/issues/18)) ([2316227](https://github.com/BeatBrackerz/Arrival/commit/23162275d67460231a0fcd282f654601142f4b38)), closes [#9](https://github.com/BeatBrackerz/Arrival/issues/9) [#9](https://github.com/BeatBrackerz/Arrival/issues/9)
+
 # [1.9.0](https://github.com/BeatBrackerz/Arrival/compare/v1.8.0...v1.9.0) (2023-08-15)
 
 
