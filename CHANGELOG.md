@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/BeatBrackerz/Arrival/compare/v1.11.0...v1.11.1) (2023-09-04)
+
+
+### Bug Fixes
+
+* **ci:** update update.yml ([9ca7337](https://github.com/BeatBrackerz/Arrival/commit/9ca7337c9184e95c4844bcd77c704e80c41afaab))
+
 # [1.11.0](https://github.com/BeatBrackerz/Arrival/compare/v1.10.0...v1.11.0) (2023-09-03)
 
 
